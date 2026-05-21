@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance vs MF Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <h2>Insurance vs MF Calculator</h2>
+        
+        <div class="input-grid">
+            <div class="input-group">
+                <label for="policyTerm">Policy Term (Total Years)</label>
+                <input type="text" id="policyTerm" placeholder="e.g. 20" inputmode="numeric">
+            </div>
+    
+            <div class="input-group">
+                <label for="premiumTerm">Premium Paying Term (Years)</label>
+                <input type="text" id="premiumTerm" placeholder="e.g. 10" inputmode="numeric">
+            </div>
+            
+            <div class="input-group">
+                <label for="monthlyPremium">Monthly Premium (₹)</label>
+                <input type="text" id="monthlyPremium" placeholder="e.g. 5,000" inputmode="numeric">
+            </div>
+    
+            <div class="input-group">
+                <label for="yearsPaid">Premium paid till now (Years)</label>
+                <input type="text" id="yearsPaid" placeholder="e.g. 5" inputmode="numeric">
+            </div>
+    
+            <div class="input-group">
+                <label for="surrenderValue">Current Surrender Value (₹)</label>
+                <input type="text" id="surrenderValue" placeholder="e.g. 2,00,000" inputmode="numeric">
+            </div>
+    
+            <div class="input-group">
+                <label for="insuranceMaturity">Projected Policy Maturity Value (₹)</label>
+                <input type="text" id="insuranceMaturity" placeholder="e.g. 40,00,000" inputmode="numeric">
+            </div>
+        </div>
+
+        <button onclick="calculateComparison()"><b>Compare</b></button>
+
+        <div class="results" id="results" style="display: none;">
+            <div class="result-item">
+                <span>*Estimated Mutual Fund Value:</span>
+                <span id="mfValueText" style="color: #28a745;">₹0</span>
+            </div>
+            <div class="result-item">
+                <span>Projected Insurance Maturity Value:</span>
+                <span id="insValueText">₹0</span>
+            </div>
+            
+            <div class="verdict" id="verdictText"></div>
+
+            <div class="disclaimer">
+                Disclaimer: Investment in securities market are subject to market risks.
+            </div>
+            <div class="disclaimer">
+                *Mutual Fund returns are calculated at 12% p.a.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
